@@ -40,6 +40,6 @@ HARDWARE:
 SOFTWARE:
 
 Arduino IDE 1.x
-LIbraries : DHT.h, LiquidCrystal.h, WiFi.h,ThingSpeak.h
+LIbraries : DHT.h, LiquidCrystal.h, WiFi.h, ThingSpeak.h
 
 
