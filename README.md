@@ -1,7 +1,9 @@
 NAME:
+
 Plant watering system      
 
 OVERVIEW:
+
 The enitre system is built around the ESP32 microcontroller, which cooridnates 
 all sensors and outputs.
 
@@ -21,12 +23,14 @@ The pump draws water from a reservoir and delivers it through a silicone tube di
 ensuring automated and effiecent irrigation.
 
 FEATURES:
+
 -Soil moisture sensing with ESP32/Arduino
 -LCD display for real time values
 -Relay controlled water pump
 -Temperature and humiduty logging 
 
 HARDWARE:
+
 -Microcontroller: ESP32
 -Sensors: DHT22, capacitive soil moisture sensor
 -Actuators 5V relay module + 5V water pump
@@ -34,6 +38,7 @@ HARDWARE:
 -Display: 16x2 LCD with variable resistor
 
 SOFTWARE:
+
 Arduino IDE 1.x
 LIbraries : DHT.h, LiquidCrystal.h
 
