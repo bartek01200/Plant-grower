@@ -1,45 +1,42 @@
-NAME:
+#ESP32 Automated Plant Watering System
+An ESP32-based automated irrigation system that monitors soil moisture,
+temperature and humidity, and activates a 5 V water pump when the soil
+becomes too dry.
 
-Plant watering system      
+The system also displays live sensor values on a 16×2 LCD and logs data
+remotely using ThingSpeak.
 
-OVERVIEW:
+##Hardware
+- ESP32
+- Capacitive soil-moisture sensor
+- DHT22 temperature and humidity sensor
+- 16×2 LCD
+- Relay module
+- 5 V water pump
+- Potentiometer
+- 5 V power supply
 
-The enitre system is built around the ESP32 microcontroller, which cooridnates 
-all sensors and outputs.
+The soil moisture sensor provides the main watering input to the ESP32.
+When the measured moisture falls below the programmed threshold, the ESP32
+activates the relay, switching power to the water pump.
 
-A capactivie soil moisture sensor determines whether the plant needs watering 
-by continuously measuring the moisture level in the soil.
+The DHT22 provides temperature and humidity measurements, while the LCD
+displays the current sensor readings locally.
 
-A DHT22 sensor provides temperature and humidity readings, giving the user insight
-into the surroundings enviromental conditions that can influence the plants water needs.
+##Software
+The firmware was developed using the Arduino framework for the ESP32.
 
-A 16x2 LCD screen displays real time temperature,humidity and soil mositre data.
+Main libraries:
+- DHT.h
+- LiquidCrystal.h
+- WiFi.h
+- ThingSpeak.h
 
-A variable resisor or potentiometer lets the user adujust the LCD backlight brightness for 
-comfortable viewing.
-
-When soil is dry the ESP32 activates a relay module which switches power to a 5v water pump.
-The pump draws water from a reservoir and delivers it through a silicone tube directly to the plants
-ensuring automated and effiecent irrigation.
-
-FEATURES:
-
--Soil moisture sensing with ESP32/Arduino
--LCD display for real time values
--Relay controlled water pump
--Temperature and humiduty logging 
-
-HARDWARE:
-
--Microcontroller: ESP32
--Sensors: DHT22, capacitive soil moisture sensor
--Actuators 5V relay module + 5V water pump
--Power: 5V regulated supply
--Display: 16x2 LCD with variable resistor
-
-SOFTWARE:
-
-Arduino IDE 1.x
-LIbraries : DHT.h, LiquidCrystal.h, WiFi.h, ThingSpeak.h
-
+The firmware handles:
+- soil-moisture acquisition
+- temperature and humidity sensing
+- automatic pump control
+- LCD updates
+- Wi-Fi connectivity
+- ThingSpeak data logging
 
