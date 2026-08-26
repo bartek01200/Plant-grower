@@ -26,26 +26,34 @@ Pump runs for 5 sec
 5 x 55.56ml/s = 277.8 mL
 
 This gets added to:
+
 totalWaterDeliveredMl
+
 dailyWaterDeliveredMl
 
 # Water efficiency:
 manualWasteMl = 2000.0
+
 Water Efficiency = 100 × (1 - Automatic Water Used/Manual Water Reference)
 
 Automatic system = 800 mL
+
 Manual reference = 2000 mL
+
 Efficiency = 100 × (1 - 800 / 2000) = 60%
 
 # Daily average light:
 During the first 12 hours:
+
 lightTotal = lightTotal+every light reading
+
 lightsamples = number of readings taken
 
 Daily average light = lightTotal/ lightSamples
 
 # Monthly average light:
 monthlyLightSum = monthly completed days average 
+
 average monthly light = monthlylightsum / monthlydays  //to see average
 
 # Average daily water use:
