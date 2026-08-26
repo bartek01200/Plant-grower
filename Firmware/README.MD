@@ -50,6 +50,11 @@ lightTotal = lightTotal+every light reading
 lightsamples = number of readings taken
 
 Daily average light = lightTotal/ lightSamples
+# Average light:
+
+Average Light =Sum of 10 LDR readings / 10
+
+Taking 10 measurements to make sure we emliminate fluctuations and get an accurate average
 
 # Monthly average light:
 monthlyLightSum = monthly completed days average 
@@ -90,3 +95,4 @@ Combined <= 40%
 Combined < 40%
 =0.5 inches
 
+ThingSpeak was used for remote monitoring and data logging, allowing sensor readings and water usage data from the ESP32 to be visualised over time using online graphs.
