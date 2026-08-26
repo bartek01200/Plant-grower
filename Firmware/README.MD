@@ -54,11 +54,16 @@ Average daily water = monthlyWatersum /monthlydays
 
 # Monthly water efficiency:
 Manual Reference = 2000 mL × Number of Days
+
 Water efficiency = 100 × (1 - Monthly automatic water/(2000 × number of days))
+
 EXAMPLE:
 10 days
+
 Manual reference =2000 × 10 = 20,000 mL
+
 Automatic system used = 8,000 mL
+
 Efficiency = 100 × (1 - 8000 / 20000) = 60%
 
 # Light efficiency:
