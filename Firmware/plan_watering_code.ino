@@ -154,11 +154,9 @@ void loop(){
     max(0.0, 100.0 * (1.0 -
     (monthlyWaterSum / (manualWasteMl * monthlyDays))));
   }
-
     float combinedEfficiency =
       (lightEfficiency * 0.6) +
       (waterEfficiency * 0.4);
-
     if (combinedEfficiency >= 70) {
       expectedGrowthInches = 1.5;
     }
@@ -192,11 +190,8 @@ void loop(){
     Serial.print("Pump OFF - Water used: ");
     Serial.print(waterUsed);
     Serial.println(" ml");
-  }
-
-
-  // Safety timeout - stops pump after 15 seconds
-  if (pumpRunning && millis() - pumpOnStart >= MAX_PUMP_TIME) {
+  }                                                         
+  if (pumpRunning && millis() - pumpOnStart >= MAX_PUMP_TIME) {//safety timeout stops pump after 15 seconds
     digitalWrite(RELAY_PIN, LOW);
 
     unsigned long runTimeMs = millis() - pumpOnStart;
@@ -208,19 +203,16 @@ void loop(){
     pumpOnStart = 0;
     Serial.println("Pump stopped - safety timeout");
   }
-  // Calculate water efficiency
-  float efficiency = 0;
+  float efficiency = 0;  //calculate water efficiency
   if (manualWasteMl > 0) {
     efficiency =
       max(0.0, 100.0 *
       (1.0 - (totalWaterDeliveredMl / manualWasteMl)));
   }
-
-
-  // Display information based on screen mode
+  //display information based on screen mode
   lcd.clear();
   switch (screenMode) {
-    case 0: // Environmental data
+    case 0: //environmental data
       lcd.setCursor(0, 0);
       lcd.print("T:");
       lcd.print(temperature, 1);
@@ -242,7 +234,6 @@ void loop(){
       lcd.setCursor(0, 1);
       lcd.print(bloomStatus);
       break;
-      
     case 2: // Water efficiency
       lcd.setCursor(0, 0);
       lcd.print("Used:");
@@ -284,9 +275,8 @@ void loop(){
       ThingSpeak.setField(5, lightValue);
       ThingSpeak.setField(6, totalWaterDeliveredMl);
       ThingSpeak.setField(7, expectedGrowthInches);
-      
       int result = ThingSpeak.writeFields(THINGSPEAK_CHANNEL_ID, THINGSPEAK_API_KEY);
-      
+    
       if (result == 200) {
         Serial.println("Data successfully sent to ThingSpeak");
       } else {
@@ -305,6 +295,5 @@ void loop(){
       Serial.println("Skipping ThingSpeak update - invalid sensor data");
     }
   }
-  
   delay(2000); 
 }// 2-second loop delay
