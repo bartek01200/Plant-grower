@@ -4,7 +4,7 @@ temperature and humidity, and activates a 5 V water pump when the soil
 becomes too dry.
 
 The system also displays live sensor values on a 16×2 LCD and logs data
-remotely using ThingSpeak.
+remotely using ThingSpeak.The project uses a breadboard for all connectivity between components.
 
 ##Hardware
 - ESP32
@@ -12,9 +12,10 @@ remotely using ThingSpeak.
 - DHT22 temperature and humidity sensor
 - 16×2 LCD
 - Relay module
-- 5 V water pump
+- 5V water pump
 - Potentiometer
-- 5 V power supply
+- 5V power supply
+- Breadboard
 
 The soil moisture sensor provides the main watering input to the ESP32.
 When the measured moisture falls below the programmed threshold, the ESP32
