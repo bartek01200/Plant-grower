@@ -23,6 +23,8 @@ activates the relay, switching power to the water pump.
 
 The DHT22 provides temperature and humidity measurements, while the LCD
 displays the current sensor readings locally.
+## Image of esp32 board with components
+![Whole Plant Watering System Setup](WHOLE-setup.jpeg)
 
 ## Software
 The firmware was developed using the Arduino C++ for the ESP32.
