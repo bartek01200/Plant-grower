@@ -1,12 +1,12 @@
 ### Changes to the project i would make next time if i were to re-do it 
 
-## multiple soil readings:
+## Multiple soil readings:
 Place multiple soil moisture sensors at different depths and locations in the pot to calculate a true average, accounting for uneven water distribution in the soil.
 
-## real Pump flow rate: 
+## Real Pump flow rate: 
 Calibrate the pumps actual flow rate experimentally rather than using manufacturer ratings, taking into account priming delays (air in the line) and tubing resistance.
 
-## multi water outlet:
+## Multi water outlet:
 Replace the single outlet silicon tube with a multi-branch micro-drip ring (shorter, smaller tubes) to distribute water evenly across the entire root system for higher absorption efficiency.
 
 ## Insulated relay connections:
