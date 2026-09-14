@@ -14,7 +14,7 @@ remotely using ThingSpeak.The project uses a breadboard for all connectivity bet
 - Relay module
 - 5V water pump
 - Potentiometer
-- 5V power supply
+- LDR
 - Breadboard
 
 The soil moisture sensor provides the main watering input to the ESP32.
