@@ -7,7 +7,7 @@ The system also displays live sensor values on a 16×2 LCD and logs data
 remotely using ThingSpeak.The project uses a breadboard for all connectivity between components.
 
 ## Hardware
-- ESP32
+- ESP32-D0WD-V3
 - Soil moisture sensor
 - DHT22 temperature and humidity sensor
 - 16×2 LCD
